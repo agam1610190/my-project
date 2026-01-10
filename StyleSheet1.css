@@ -1,94 +1,127 @@
-﻿.rec body {
-    background: #f5efe6;
-    font-family: "Segoe UI", sans-serif;
+﻿/* General Page Styling */
+body {
+    background-color: #fdfbf7; /* Soft cream background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* Ensures Hebrew alignment */
 }
 
-/* Main container */
-.rec #MainContent {
-    max-width: 1100px;
-    margin: auto;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-}
-
-/* Main titles */
-.rec h1 {
-    text-align: center;
-    background: linear-gradient(90deg, #ffcc33, #ffb703);
+/* Container for all recipes */
+.rec {
+    max-width: 900px;
+    margin: 40px auto;
     padding: 20px;
+}
+
+/* Individual Recipe Card */
+.recipe-card {
+    background: #ffffff;
     border-radius: 15px;
-    color: #5a2d0c;
-    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 40px;
+    margin-bottom: 50px;
+    border: 1px solid #eee;
 }
 
-/* Section titles */
-.rec h2 {
-    color: #7a3e10;
-    border-bottom: 3px solid orange;
-    padding-bottom: 10px;
-    margin-top: 40px;
-}
-
-/* Recipe intro text */
-.rec p {
-    line-height: 1.8;
-    font-size: 18px;
-}
-
-/* Recipe image */
-.rec img {
-    display: block;
-    margin: 30px auto;
-    max-width: 400px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* Ingredients list */
-.rec p strong {
-    display: block;
-    background: #fff3d4;
-    padding: 12px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-/* Instructions list */
-.rec ol {
-    background: #fff8e1;
-    padding: 30px;
-    border-radius: 20px;
-    font-size: 18px;
-}
-
-    .rec ol li {
-        margin-bottom: 15px;
+    /* Headlines */
+    .recipe-card h1 {
+        color: #2c3e50;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        border-bottom: 3px solid #e67e22; /* Foodie orange accent */
+        display: inline-block;
+        padding-bottom: 5px;
     }
 
-/* Horizontal lines */
-.rec hr {
-    border: none;
-    height: 3px;
-    background: linear-gradient(to right, orange, gold);
-    margin: 40px 0;
-}
-
-/* Second recipe block */
-.rec h1:last-of-type {
-    margin-top: 80px;
-    background: linear-gradient(90deg, #b5838d, #ffb4a2);
-}
-
-/* Make it responsive */
-@media (max-width: 800px) {
-    .rec img {
-        max-width: 90%;
+    .recipe-card h2 {
+        color: #e67e22;
+        font-size: 1.8rem;
+        margin-top: 30px;
+        border-right: 5px solid #e67e22;
+        padding-right: 15px;
     }
 
-    .rec #MainContent {
+    /* Images */
+    .recipe-card img {
+        display: block;
+        width: 100% !important; /* Makes images responsive */
+        max-width: 800px;
+        height: auto !important;
+        border-radius: 12px;
+        margin: 25px auto;
+        object-fit: cover;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Text & Descriptions */
+    .recipe-card p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    /* Ingredients List */
+    .recipe-card strong {
+        display: block;
+        background: #fff8f0;
+        padding: 8px 15px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        border-right: 3px solid #f39c12;
+        font-weight: 500;
+    }
+
+    /* Instructions List (Ordered List) */
+    .recipe-card ol {
+        padding-right: 25px;
+    }
+
+        .recipe-card ol li {
+            margin-bottom: 15px;
+            padding-right: 10px;
+            font-size: 1.1rem;
+        }
+
+            .recipe-card ol li::marker {
+                color: #e67e22;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+/* Horizontal Rule */
+hr {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 30px 0;
+}
+
+/* Mobile Friendly */
+@media (max-width: 600px) {
+    .recipe-card {
         padding: 20px;
     }
+
+        .recipe-card h1 {
+            font-size: 1.8rem;
+        }
+}
+/* Styling for Sub-sections in Instructions (h3) */
+.recipe-card h3 {
+    color: #5d4037; /* Warm earthy brown */
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    border-bottom: 1px dashed #d7ccc8; /* Subtle dashed line under the sub-step title */
+    padding-bottom: 4px;
+    display: block;
+}
+
+/* This ensures that if an h3 follows an ol, there's enough space */
+.recipe-card ol + h3 {
+    margin-top: 30px;
 }

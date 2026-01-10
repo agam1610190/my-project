@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="WebApplication5.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>סבתא בישלה דייסה</title>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+    margin: 0;
+    background: #f4f4f4;
+    font-family: 'Segoe UI', Arial;
+    direction: rtl;
+}
+
+nav {
+    background-color:darkorange;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            height: 122px;
+        }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: #5a2d0c;
+}
+
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #5a2d0c;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+.menu a:hover {
+    background: #ffd24d;
+}
+
+.page {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    min-height: 400px;
+}
+
+footer {
+    background: #ffcc33;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+
+        <nav>
+    <div class="logo">
+        <img src="https://chabadnikit.com/wp-content/uploads/2022/11/%D7%A1%D7%91%D7%AA%D7%90-%D7%9E%D7%91%D7%A9%D7%9C%D7%AA.png">
+        <h1>סבתא בישלה דייסה</h1>
+    </div>
+
+    <div class="menu">
+        <a href="Default.aspx">בית</a>
+        <a href="About.aspx">סיפורים</a>
+        <a href="Recipies.aspx">מתכונים</a>
+        <a href="Contact.aspx">צור קשר</a>
+    </div>
+</nav>
+
+<div class="page">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+</div>
+
+<footer>
+    © 2026 סבתא בישלה דייסה 
+</footer>
+
+    </form>
+</body>
+</html>

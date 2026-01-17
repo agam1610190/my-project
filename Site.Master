@@ -1,112 +1,46 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="WebApplication5.SiteMaster" %>
-
-<!DOCTYPE html>
-<html>
-<head runat="server">
-    <title>סבתא בישלה דייסה</title>
-
-    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-
-        body {
-    margin: 0;
-    background: #f4f4f4;
-    font-family: 'Segoe UI', Arial;
-    direction: rtl;
-}
-
-nav {
-    background-color:darkorange;
-    padding: 15px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            height: 122px;
-        }
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo img {
-    height: 70px;
-}
-
-.logo h1 {
-    font-size: 28px;
-    color: #5a2d0c;
-}
-
-.menu a {
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #5a2d0c;
-    padding: 8px 15px;
-    border-radius: 10px;
-}
-
-.menu a:hover {
-    background: #ffd24d;
-}
-
-.page {
-    max-width: 1200px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    min-height: 400px;
-}
-
-footer {
-    background: #ffcc33;
-    text-align: center;
-    padding: 15px;
-    font-weight: bold;
-    margin-top: 50px;
-}
-
-        }
-    </style>
-</head>
-
-<body>
+﻿<body>
     <form id="form1" runat="server">
+        <table style="width: 100%; border-collapse: collapse; min-height: 100vh;">
+            <tr style="background-color: darkorange; height: 122px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                <td>
+                    <table style="width: 100%; padding: 0 40px;">
+                        <tr>
+                            <td class="logo" style="text-align: right;">
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <img src="https://chabadnikit.com/wp-content/uploads/2022/11/%D7%A1%D7%91%D7%AA%D7%90-%D7%9E%D7%91%D7%A9%D7%9C%D7%AA.png" style="height: 70px;">
+                                    <h1 style="font-size: 28px; color: #5a2d0c; margin: 0;">סבתא בישלה דייסה</h1>
+                                </div>
+                            </td>
+                            <td class="menu" style="text-align: left;">
+                                <a href="Default.aspx">בית</a>
+                                <a href="About.aspx">סיפורים</a>
+                                <a href="Recipies.aspx">מתכונים</a>
+                                <a href="Contact.aspx">צור קשר</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <nav>
-    <div class="logo">
-        <img src="https://chabadnikit.com/wp-content/uploads/2022/11/%D7%A1%D7%91%D7%AA%D7%90-%D7%9E%D7%91%D7%A9%D7%9C%D7%AA.png">
-        <h1>סבתא בישלה דייסה</h1>
-    </div>
+            <tr>
+                <td style="padding: 40px 0; vertical-align: top; align-content:center">
+                    <table class="page" style="width: 1200px; margin: 0 auto; background: white; border-radius: 20px; border-spacing: 30px;">
+                        <tr>
+                            <td>
+                                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-    <div class="menu">
-        <a href="Default.aspx">בית</a>
-        <a href="About.aspx">סיפורים</a>
-        <a href="Recipies.aspx">מתכונים</a>
-        <a href="Contact.aspx">צור קשר</a>
-    </div>
-</nav>
-
-<div class="page">
-    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-</div>
-
-<footer>
-    © 2026 סבתא בישלה דייסה 
-</footer>
-
+            <tr style="background: #ffcc33; height: 50px;">
+                <td style="text-align: center; font-weight: bold;">
+                    <footer>
+                        © 2026 סבתא בישלה דייסה 
+                    </footer>
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
-</html>

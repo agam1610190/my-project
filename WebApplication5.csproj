@@ -161,7 +161,9 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Recipies.aspx" />
     <Content Include="StyleSheet2.css" />
-    <Content Include="WebForm2.aspx" />
+    <Content Include="..\..\..\OneDrive\שולחן העבודה\WebForm2.aspx">
+      <Link>WebForm2.aspx</Link>
+    </Content>
     <None Include="Dockerfile" />
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>
@@ -256,12 +258,14 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>Recipies.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm2.aspx.cs">
+    <Compile Include="..\..\..\OneDrive\שולחן העבודה\WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+      <Link>WebForm2.aspx.cs</Link>
     </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
+    <Compile Include="..\..\..\OneDrive\שולחן העבודה\WebForm2.aspx.designer.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
+      <Link>WebForm2.aspx.designer.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
